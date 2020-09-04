@@ -4,7 +4,10 @@
  */
 
 function length(str) {
+  return str.length
 }
+const result=length("HelloWorld");
+console.log(result);
 
 /**
  *  4.2 文字列のながさが偶数の場合にtrueを返却するメソッドを実装してください
@@ -12,7 +15,15 @@ function length(str) {
  */
 
 function lengthIsEven(str) {
+  return str.length;
 }
+const result=lengthIsEven("HelloWorld");
+if(result%2===0){
+  console.log("true");
+}else{
+  console.log("false");
+}
+
 
 /**
  *  4.3 文字列の先頭一文字目を返却するメソッドを実装してください
@@ -20,7 +31,11 @@ function lengthIsEven(str) {
  */
 
 function firstChar(str) {
+  return str.charAt(0);
 }
+
+const result=firstChar("HelloWorld");
+console.log(result);
 
 /**
  *  4.4 文字列の末尾一文字目を返却するメソッドを実装してください
@@ -28,7 +43,10 @@ function firstChar(str) {
  */
 
 function lastChar(str) {
+  return str.slice(-1);
 }
+const result=lastChar("HelloWorld");
+console.log(result);
 
 /**
  *  4.5 文字列と二つの数字a, bを渡すとa文字目から, b文字目まで
@@ -51,6 +69,7 @@ function substring(str, a, b) {
  * */
 
 function isInclude(a, b) {
+  
 }
 
 /**
@@ -66,6 +85,8 @@ function isInclude(a, b) {
 
 function printByChar(str) {
 }
+
+//不明
 
 
 module.exports = {

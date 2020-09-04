@@ -8,7 +8,12 @@
  */
 
 function getPersonObject() {
+  const data={name: 'Bob',age: 32,gender: 'male'}
+  return data;
 }
+getPersonObject();
+
+
 
 /**
  *  6.2 下記データAが引数で与えられた場合にデータBに書き換える関数を実装してください。

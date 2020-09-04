@@ -4,7 +4,12 @@
  */
 
 function printArray(array) {
+  for(let i=0; i<3; i++) {
+    console.log(array[i]);
+  }
 }
+
+console.log(["apple","orange","banana"]);
 
 /**
  *  5.2 関数内で全ての曜日を配列として宣言して返却するメソッドを実装してください
@@ -22,7 +27,9 @@ function printArray(array) {
  *
  */
 function getDays() {
+  const Days=
 }
+
 
 /**
  *  5.3 配列に特定の数があった場合にtrue、そうでない場合にfalseを返す関数を実装してください
