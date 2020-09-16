@@ -274,7 +274,7 @@ function fizzBuzz () {
       console.log(i);
   }
 }
-
+}
 //誤り
 
 module.exports = {
