@@ -12,7 +12,6 @@ function printMessageByAge(age) {
     console.log("未成年です。");
   }
 }
-printMessageByAge(30);
 
 /**
  *  2.2 引数から与えられた時間が
@@ -31,7 +30,7 @@ function greeding(hour) {
     console.log("Good Night");
   }
 }
-greeding(12);
+
 
 /**
  *  2.3 引数から与えられた数字に対応する曜日を返却するメソッドを実装してください
@@ -69,11 +68,11 @@ function getDay(day) {
     case 5:
       console.log("Friday");
       break;
+      
     case 6:
       console.log("Saturday");
       break;}
 }
-getDay(6);
 
 module.exports = {
   printMessageByAge,

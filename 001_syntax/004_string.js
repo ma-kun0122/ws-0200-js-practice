@@ -4,10 +4,9 @@
  */
 
 function length(str) {
-  return str.length
+  return arguments[0].length
 }
-const result=length("HelloWorld");
-console.log(result);
+
 
 /**
  *  4.2 文字列のながさが偶数の場合にtrueを返却するメソッドを実装してください
@@ -15,15 +14,12 @@ console.log(result);
  */
 
 function lengthIsEven(str) {
-  return str.length;
+  if(arguments[0].length%2===0){
+    return true;
+  }else{
+    return false;
+  }
 }
-const result=lengthIsEven("HelloWorld");
-if(result%2===0){
-  console.log("true");
-}else{
-  console.log("false");
-}
-
 
 /**
  *  4.3 文字列の先頭一文字目を返却するメソッドを実装してください
@@ -31,11 +27,11 @@ if(result%2===0){
  */
 
 function firstChar(str) {
-  return str.charAt(0);
+  return arguments[0].charAt(0);
 }
 
-const result=firstChar("HelloWorld");
-console.log(result);
+
+
 
 /**
  *  4.4 文字列の末尾一文字目を返却するメソッドを実装してください
@@ -43,10 +39,10 @@ console.log(result);
  */
 
 function lastChar(str) {
-  return str.slice(-1);
+  return arguments[0].slice(-1);
 }
-const result=lastChar("HelloWorld");
-console.log(result);
+
+
 
 /**
  *  4.5 文字列と二つの数字a, bを渡すとa文字目から, b文字目まで
@@ -55,7 +51,10 @@ console.log(result);
  */
 
 function substring(str, a, b) {
+  return arguments[0].substr(a-1,b);
 }
+
+//http://catprogram.hatenablog.com/entry/2013/05/13/231457
 
 /**
  *  4.6 引数に与えられた二つの引数のうち、一つ目の引数の文字列に二つ目の引数の文字列が
@@ -69,7 +68,8 @@ function substring(str, a, b) {
  * */
 
 function isInclude(a, b) {
-  
+  const result=arguments[0].includes(arguments[1]);
+  return result;
 }
 
 /**
@@ -84,10 +84,10 @@ function isInclude(a, b) {
  */
 
 function printByChar(str) {
+  return str.slice(0,[]); 
 }
 
 //不明
-
 
 module.exports = {
   length,

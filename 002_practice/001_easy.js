@@ -12,6 +12,7 @@
  */
 
 function length(str) {
+  return str.size;
 }
 
 /**
@@ -26,7 +27,11 @@ function length(str) {
  *
  */
 function reverse(str) {
+  return str.split("").reverse().join("");
 }
+
+//https://qiita.com/may88seiji/items/54cd61f8842bdffd5867
+
 
 /**
  *  指定された文字列の位置を返却
@@ -41,7 +46,12 @@ function reverse(str) {
  */
 
 function findIndex(str, char) {
+  return str.indexOf(char);
 }
+
+//https://itsakura.com/javascript-indexof
+
+
 
 /**
  *  指定された文字列を指定された文字で分割
@@ -56,6 +66,7 @@ function findIndex(str, char) {
  */
 
 function split(a, b) {
+  return a.split(b);
 }
 
 /**
@@ -71,7 +82,15 @@ function split(a, b) {
  */
 
 function sum(array) {
+  let sum=0;
+  for(let i=0,len= array.length; i<len; i++){
+    sum += array[i];
+  }
+  return sum;
 }
+
+//https://techacademy.jp/magazine/22328
+
 
 /**
  *  配列の平均
@@ -88,7 +107,16 @@ function sum(array) {
  */
 
 function average(array) {
+  let sum=0;
+  for(let i=0,len= array.length; i<len; i++){
+    sum += array[i];
+  }
+  let average=sum/array.length;
+  return Math.floor(average);
 }
+
+//誤り
+
 
 /**
  *  配列の結合
@@ -103,7 +131,11 @@ function average(array) {
  */
 
 function concat(a, b) {
+  return a.concat(b);
 }
+
+//https://techacademy.jp/magazine/26921
+
 
 /**
  *  2.1.2 配列の個数
@@ -118,6 +150,7 @@ function concat(a, b) {
  */
 
 function size(array) {
+  return array.length;
 }
 
 /**
@@ -134,7 +167,15 @@ function size(array) {
  */
 
 function minMax(array) {
+  let min=Math.min(array);
+  let max=Math.max(array);
+  console.log(`max: ${max}, min: ${min}`);
 }
+
+//https://www.softel.co.jp/blogs/tech/archives/1377
+
+//誤り
+
 
 /**
  *  連番
@@ -148,7 +189,11 @@ function minMax(array) {
  */
 
 function seq(num) {
+  return [...Array(num).keys()];
 }
+
+//参照　https://qiita.com/sakymark/items/710f0b9a632c375fbc31
+
 
 /**
  *  奇数の連番
@@ -163,7 +208,16 @@ function seq(num) {
  */
 
 function omitSeq(num) {
+  const odd=num.filter(function(value){
+    return value%2 ===1;
+  });
+  return [...Array(odd).keys()];
 }
+
+//誤り
+//https://qiita.com/Sekky0905/items/598b47fea2106b8c140e
+//filterメソッドについて　https://techacademy.jp/magazine/15575
+
 
 /**
  *  指定された数値以下の配列
@@ -178,9 +232,12 @@ function omitSeq(num) {
  */
 
 function filter(array, num) {
+  const numbers=array.filter(function(value){
+  })
+  return [...Array(numbers).keys()];
 }
 
-
+//誤り
 
 /**
  *  Fizz Buzz
@@ -206,7 +263,19 @@ function filter(array, num) {
  */
 
 function fizzBuzz () {
+  for(let i=0; i<=100; i++){
+    if(i%15 ===0){
+      console.log("FizzBuzz");
+    }else if(i%3 ===0){
+      console.log(i+ "Fizz");
+    }else if(i%5 ===0){
+      console.log(i+ "Buzz");
+    }else{
+      console.log(i);
+  }
 }
+
+//誤り
 
 module.exports = {
   length,

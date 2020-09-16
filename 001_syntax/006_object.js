@@ -11,7 +11,7 @@ function getPersonObject() {
   const data={name: 'Bob',age: 32,gender: 'male'}
   return data;
 }
-getPersonObject();
+
 
 
 
@@ -30,7 +30,14 @@ getPersonObject();
  */
 
 function mutateObject(person) {
+  let Data1={name: 'Bob',age: 32,gender: 'male'};
+  let Data2={name: 'Mary',age: 37,gender: 'female'};
+  if(person=Data1){
+    person=Data2;
 }
+}
+
+//誤り
 
 /**
  *  6.3 下記引数で渡される配列にランダムな1 ~10の数字を割り振り、オブジェクトとして返す
@@ -54,7 +61,16 @@ function mutateObject(person) {
  */
 
 function assignNumber(persons) {
+  const min=1
+  const max=10
+  const randomNumber=Math.floor( Math.random()*(max+1-min))+min;
+  const menbers=['Bob','Mary','Ann','Mike'];
+  return 
+
 }
+
+//https://lab.syncer.jp/Web/JavaScript/Snippet/15/
+
 
 /**
  *  6.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください

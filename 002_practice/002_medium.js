@@ -10,6 +10,7 @@
  *
  */
 function rotate(str, num) {
+  
 }
 
 /**
@@ -24,7 +25,14 @@ function rotate(str, num) {
  *
  */
 function removeVowels(str) {
+  const vowel=["a","i","u","e","o"]
+  const consonant=str.split("").filter(function(a){
+  return a !==vowel;
+  });
+  return consonant.join("");
 }
+
+//誤り
 
 /**
  *  文字列のカウント
@@ -38,6 +46,8 @@ function removeVowels(str) {
  *
  */
 function countStr(s1, s2) {
+  const count=strCount(s2,s1);
+  return count;
 }
 
 /**
@@ -53,6 +63,12 @@ function countStr(s1, s2) {
  */
 
 function isPalindrome(str) {
+  const reverseStr=str.split("").reverse().join("");
+  if(str===reverseStr){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 /**
@@ -70,6 +86,15 @@ function isPalindrome(str) {
  *
  */
 function isPrime(num) {
+  if(num===2){
+    return true;
+  }
+  for(let i=2; i<num; i++){
+    if(num%i ===0){
+      return false;
+    }else{
+      return true;
+  }}
 }
 
 /**

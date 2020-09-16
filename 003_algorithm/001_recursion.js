@@ -11,7 +11,15 @@
  */
 
 function sumSequence (n, sum = 0) {
+  if (n<= 0){
+    return n;
+  }
+  return n + sum(n-1);
 }
+
+//https://qiita.com/jumpyoshim/items/20e6b5e70efa466699b4
+
+
 
 /**
  *  フィボナッチ数
@@ -24,6 +32,10 @@ function sumSequence (n, sum = 0) {
  */
 
 function fibonacci (num, index = 0, array = []) {
+  if (num<=1){
+    return num;
+  }
+  
 }
 
 

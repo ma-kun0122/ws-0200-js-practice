@@ -12,7 +12,17 @@
  */
 
 function linearSearch (array, target) {
+  let index= -1;
+  for(let i=0; i <array.length; i++){
+    if(target=== array[i]){
+      return target;}
+  }
 }
+
+//誤り
+//http://exrecord.net/program-linear-and-binary-of-search-algorithm-with-javascript
+
+
 
 /**
  *  2.3.2 バイナリサーチ
@@ -25,7 +35,11 @@ function linearSearch (array, target) {
  */
 
 function binarySearch (array, target) {
+
 }
+
+//https://qiita.com/may88seiji/items/189002cb497e61578114
+
 
 module.exports = {
   linearSearch,
