@@ -14,7 +14,7 @@ function sumSequence (n, sum = 0) {
   if (n<= 0){
     return n;
   }
-  return n + sum(n-1);
+  return n + sumSequence(n-1);
 }
 
 //https://qiita.com/jumpyoshim/items/20e6b5e70efa466699b4
@@ -25,17 +25,17 @@ function sumSequence (n, sum = 0) {
  *  フィボナッチ数
  *
  *  指定された数のフィボナッチ数を返却する関数を実装してください。
- *  https://www.studyplus.jp/445
+ *  
  *
  *  example:
  *    input: 10 => [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
  */
 
 function fibonacci (num, index = 0, array = []) {
-  if (num<=1){
-    return num;
+  if (num < 2){
+  return 1;
+  }else{return array.push(fibonacci(num - 1) + fibonacci(num - 2));
   }
-  
 }
 
 

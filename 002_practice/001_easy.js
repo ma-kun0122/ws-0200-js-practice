@@ -12,7 +12,7 @@
  */
 
 function length(str) {
-  return str.size;
+
 }
 
 /**
@@ -29,6 +29,8 @@ function length(str) {
 function reverse(str) {
   return str.split("").reverse().join("");
 }
+
+//OK
 
 //https://qiita.com/may88seiji/items/54cd61f8842bdffd5867
 
@@ -82,13 +84,14 @@ function split(a, b) {
  */
 
 function sum(array) {
-  let sum=0;
-  for(let i=0,len= array.length; i<len; i++){
-    sum += array[i];
+  let add=0;
+  for(let i=0, len= array.length; i < len ; i ++){
+    add += array[i];
   }
-  return sum;
+  return add;
 }
 
+//https://analogic.jp/for-loop-optimization/
 //https://techacademy.jp/magazine/22328
 
 
@@ -107,15 +110,16 @@ function sum(array) {
  */
 
 function average(array) {
-  let sum=0;
-  for(let i=0,len= array.length; i<len; i++){
-    sum += array[i];
+  let add=0
+  for(let i = 0,len = array.length; i < len; i ++){
+    add += array[i];
   }
-  let average=sum/array.length;
-  return Math.floor(average);
+
+  let ave  = Math.floor(add / array.length);
+  return ave
 }
 
-//誤り
+//誤り。引数が無い時、NaNになる
 
 
 /**
@@ -167,14 +171,26 @@ function size(array) {
  */
 
 function minMax(array) {
-  let min=Math.min(array);
-  let max=Math.max(array);
+  let max = array[0]
+  let min = array[0]
+  for(let i = 0; i <= array.length; i ++){
+    if(max < array[i]){
+      max = array[i]
+    }
+  }
+  for(let i = 0; i <= array.length; i ++){
+    if(min > array[i]){
+      min = array[i]
+    }
+  }
   console.log(`max: ${max}, min: ${min}`);
 }
 
+
+//http://www.dicre.com/ols/jvs/body66.html
 //https://www.softel.co.jp/blogs/tech/archives/1377
 
-//誤り
+//テストコードでは誤り。
 
 
 /**
@@ -189,9 +205,14 @@ function minMax(array) {
  */
 
 function seq(num) {
-  return [...Array(num).keys()];
+  const array =[]
+  for(let i = 0; i < num.length; i++){
+    array += array.push(i)
+  }
+  return array
 }
 
+//誤り
 //参照　https://qiita.com/sakymark/items/710f0b9a632c375fbc31
 
 
@@ -211,8 +232,10 @@ function omitSeq(num) {
   const odd=num.filter(function(value){
     return value%2 ===1;
   });
-  return [...Array(odd).keys()];
+  
 }
+
+
 
 //誤り
 //https://qiita.com/Sekky0905/items/598b47fea2106b8c140e
@@ -232,12 +255,15 @@ function omitSeq(num) {
  */
 
 function filter(array, num) {
-  const numbers=array.filter(function(value){
-  })
-  return [...Array(numbers).keys()];
+  let numbers = []
+  for(let i = 0; i <= array.length; i ++){
+    if(array[i] <= num){
+      numbers.push(array[i])
+    }
+  }
+  return numbers
 }
 
-//誤り
 
 /**
  *  Fizz Buzz
@@ -263,19 +289,19 @@ function filter(array, num) {
  */
 
 function fizzBuzz () {
-  for(let i=0; i<=100; i++){
+  for(let i=1; i<=100; i++){
     if(i%15 ===0){
-      console.log("FizzBuzz");
+      console.log(i + " FizzBuzz");
     }else if(i%3 ===0){
-      console.log(i+ "Fizz");
+      console.log(i + " Fizz");
     }else if(i%5 ===0){
-      console.log(i+ "Buzz");
+      console.log(i + " Buzz");
     }else{
       console.log(i);
   }
 }
 }
-//誤り
+
 
 module.exports = {
   length,

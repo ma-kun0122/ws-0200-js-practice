@@ -24,12 +24,18 @@ function rotate(str, num) {
  *    'banana' => 'bnn'
  *
  */
+
+
+
 function removeVowels(str) {
-  const vowel=["a","i","u","e","o"]
-  const consonant=str.split("").filter(function(a){
-  return a !==vowel;
-  });
-  return consonant.join("");
+  let consonant　= []//子音が入る配列
+  let vowel = ['a','i','u','e','o']//母音を定義
+  let one = str.split("")//文字列を1文字ずつに分解
+  for (let i = 0; i <= one.length; i ++){
+    if(one[i].include(vowel)){
+      return one[i].push(consonant)
+    }
+  }return consonant
 }
 
 //誤り
@@ -46,8 +52,8 @@ function removeVowels(str) {
  *
  */
 function countStr(s1, s2) {
-  const count=strCount(s2,s1);
-  return count;
+  let array = []
+  return s1.count(s2)
 }
 
 /**
@@ -86,15 +92,20 @@ function isPalindrome(str) {
  *
  */
 function isPrime(num) {
-  if(num===2){
-    return true;
+  if(num === 1){
+    return false
   }
-  for(let i=2; i<num; i++){
-    if(num%i ===0){
-      return false;
-    }else{
-      return true;
-  }}
+  if(num === 2) {
+    return true;
+  }else {
+  for(i = 2; i < num; i++) {
+  if(num % i === 0) {
+    return false;
+  }
+  if(i + 1 === num) {
+    return true;}
+  }
+}
 }
 
 /**

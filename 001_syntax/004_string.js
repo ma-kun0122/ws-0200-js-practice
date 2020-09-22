@@ -4,7 +4,7 @@
  */
 
 function length(str) {
-  return arguments[0].length
+  return str.length
 }
 
 
@@ -14,7 +14,7 @@ function length(str) {
  */
 
 function lengthIsEven(str) {
-  if(arguments[0].length%2===0){
+  if(str.length %2 === 0){
     return true;
   }else{
     return false;
@@ -27,7 +27,7 @@ function lengthIsEven(str) {
  */
 
 function firstChar(str) {
-  return arguments[0].charAt(0);
+  return str.charAt(0);
 }
 
 
@@ -39,7 +39,7 @@ function firstChar(str) {
  */
 
 function lastChar(str) {
-  return arguments[0].slice(-1);
+  return str.slice(-1);
 }
 
 
@@ -51,7 +51,7 @@ function lastChar(str) {
  */
 
 function substring(str, a, b) {
-  return arguments[0].substr(a-1,b);
+  return str.substr(a-1,b);
 }
 
 //http://catprogram.hatenablog.com/entry/2013/05/13/231457
@@ -68,26 +68,23 @@ function substring(str, a, b) {
  * */
 
 function isInclude(a, b) {
-  const result=arguments[0].includes(arguments[1]);
+  const result=a.includes(b);
   return result;
 }
 
 /**
  *  4.7 引数で渡された文字列を一文字ずつ表示するメソッドを実装してください
  *
- *  example:
- *      work => false
- *      anna => true
- *      madam => true
- *      level => true
+ *  
  *
  */
 
 function printByChar(str) {
-  return str.slice(0,[]); 
+  for(let i = 0;i <=str.length; i ++){
+    console.log(str[i]);
+  }
 }
 
-//不明
 
 module.exports = {
   length,

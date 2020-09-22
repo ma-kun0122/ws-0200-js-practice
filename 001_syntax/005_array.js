@@ -4,10 +4,9 @@
  */
 
 function printArray(array) {
-  const numbers=array;
-  numbers.forEach((array)=>{
-    console.log(array);}
-);
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  };
 }
 /**
  *  5.2 関数内で全ての曜日を配列として宣言して返却するメソッドを実装してください
@@ -25,12 +24,11 @@ function printArray(array) {
  *
  */
 function getDays() {
-  const days=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-  for(let i=0; i<=days.length; i++){
-    return days[i];
+  const days = []
+  for(let i = 0; i <= days.length; i ++){
+    return days[i] = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
   }
 }
-//テスト結果、引数0の時、「Monday」ではなく「M」のみ返却
 
 /**
  *  5.3 配列に特定の数があった場合にtrue、そうでない場合にfalseを返す関数を実装してください
@@ -43,11 +41,14 @@ function getDays() {
  */
 
 function findNum(array, num) {
-  return array.includes(num);
+  for (let i = 0; i <= array.length ; i++) {
+    if (num == array[i]) {
+      return true;
+    }
+  }return false;
 }
 
-//参考URL https://techacademy.jp/magazine/22267
-
+//https://qiita.com/tohda/items/782e77d420420f9f383f
 
 /**
  *  5.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
@@ -60,9 +61,14 @@ function findNum(array, num) {
  */
 
 function isDuplicate(array) {
-  const st=new Set(array);
-  return st.size !=array.length;
+  for(let i = 0; i <= array.length; i ++ ){
+  if(array.indexOf(array[i]) === array.lastIndexOf(array[i])){
+    return true;
+  }
+  return false;}
 }
+
+//考え方：指定文字が登場する最初の場所と、最後の場所が同じなら重複なし。反対に、同じでなければ重複。ただし配列がすべておなじ場合は？
 
 //https://pisuke-code.com/js-check-duplicated-array-values/
 //length.sizeまとめ https://qiita.com/sainu/items/7d761c026563a649d046

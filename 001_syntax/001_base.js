@@ -39,7 +39,7 @@ function displayArgument(arg) {
  *
  */
 function sumTwoArgs(a, b) {
-  return a+b
+  return a + b
 }
 
 
@@ -49,7 +49,7 @@ function sumTwoArgs(a, b) {
  *
  */
 function subtractTwoArgs(a, b) {
-  return a-b
+  return a - b
 }
 
 
@@ -60,14 +60,11 @@ function subtractTwoArgs(a, b) {
  *
  */
 function quotientTwoArgs(a, b) {
-  if(b!==0){
-    return a%b
-  }else{
-    return null;
+  if(b === 0){
+    return null
   }
+  return Math.floor(a / b)
 }
-
-//間違い
 
 
 /**
@@ -75,7 +72,7 @@ function quotientTwoArgs(a, b) {
  *
  */
 function productTwoArgs(a, b) {
-  return a*b
+  return a * b
 }
 
 
@@ -84,7 +81,7 @@ function productTwoArgs(a, b) {
  *
  */
 function remainderTwoArgs(a) {
-  return a%2
+  return a % 2
 }
 
 
@@ -93,11 +90,7 @@ function remainderTwoArgs(a) {
  *
  */
 function isEven(a) {
-  if(a%2 ==0){
-    return true;
-  }else{
-    return false;
-  }
+  return a % 2 ===　0;
 }
 
 
@@ -106,8 +99,8 @@ function isEven(a) {
  *
  */
 function concatString(a, b) {
-  return arguments[0]+arguments[1]
-}
+  return a + b
+;}
 
 
 module.exports = {
